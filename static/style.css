@@ -2,16 +2,33 @@ body {
     background-color: #003049;
 }
 
-h1, h2, button {
-    color: #eae2b7;
+.header {
+    background-color: #ddc385;
+    border-radius: 2rem;
+    width: 67%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1,
+h2,
+button {
+    color: #ddc385;
     text-align: center;
 }
 
 h1 {
-    font-size: 4rem;
-    font-family: 'Inter', sans-serif;
+    font-size: 5rem;
+    font-family: 'David Libre', serif;
+    overflow-wrap: break-word;
 }
 
 h2 {
-    font-family: 'David Libre', serif;
+    font-family: 'Inter', sans-serif;
+}
+
+.brand-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
