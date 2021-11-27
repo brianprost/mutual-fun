@@ -1,0 +1,17 @@
+body {
+    background-color: #003049;
+}
+
+h1, h2, button {
+    color: #eae2b7;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+    font-family: 'Inter', sans-serif;
+}
+
+h2 {
+    font-family: 'David Libre', serif;
+}
