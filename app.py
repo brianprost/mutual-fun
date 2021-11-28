@@ -10,15 +10,15 @@ def play_game():
 
 def generate_company_name():
     company_name = ""
-    with open('static/adjectives.txt', 'r') as f:
+    with open('static/words/adjectives.txt', 'r') as f:
         words = f.read().splitlines()
         company_name = random.choice(words).capitalize() + " "
 
-    with open('static/nouns.txt', 'r') as f:
+    with open('static/words/nouns.txt', 'r') as f:
         words = f.read().splitlines()
         company_name += random.choice(words).capitalize() + " "
 
-    with open('static/verbs.txt', 'r') as f:
+    with open('static/words/verbs.txt', 'r') as f:
         words = f.read().splitlines()
         company_name += random.choice(words).capitalize()
     return company_name
