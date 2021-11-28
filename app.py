@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route("/")
 def play_game():
     company_name = generate_company_name()
-    return render_template("base.html", company_name=company_name)
+    return render_template("play_game.html", company_name=company_name)
 
 def generate_company_name():
     company_name = ""
