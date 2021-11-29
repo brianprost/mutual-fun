@@ -1,5 +1,4 @@
 <script>
-    import Nested from "./AnotherOneButton.svelte";
     let companyName = generateCompanyName();
 
     function generateCompanyName() {

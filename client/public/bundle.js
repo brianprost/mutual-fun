@@ -298,7 +298,7 @@ var app = (function () {
     			t1 = space();
     			div = element("div");
     			button = element("button");
-    			button.textContent = "Another One";
+    			button.textContent = "AnotherOne";
     			attr(h1, "class", "company-name");
     			attr(button, "class", "another-one-button");
     			attr(button, "type", "submit");
