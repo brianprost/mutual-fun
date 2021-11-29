@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, send_from_directory
 import random
 
 app = Flask(__name__)
@@ -6,25 +6,30 @@ app = Flask(__name__)
 
 @app.route("/")
 def play_game():
-    company_name = generate_company_name()
-    return render_template("play_game.html", company_name=company_name)
+    return send_from_directory("client/public", "index.html")
 
 
+@app.route("/<path:path>")
+def home(path):
+    return send_from_directory("client/public", path)
+
+
+@app.route("/generate-company-name")
 def generate_company_name():
     company_name = ""
-    with open('static/words/adjectives.txt', 'r') as f:
+    with open('words/adjectives.txt', 'r') as f:
         words = f.read().splitlines()
         company_name = random.choice(words).capitalize() + " "
 
-    with open('static/words/nouns.txt', 'r') as f:
+    with open('words/nouns.txt', 'r') as f:
         words = f.read().splitlines()
         company_name += random.choice(words).capitalize() + " "
 
-    with open('static/words/verbs.txt', 'r') as f:
+    with open('words/verbs.txt', 'r') as f:
         words = f.read().splitlines()
         company_name += random.choice(words).capitalize()
     return company_name
 
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=8000, debug=False)
+    app.run(debug=False)
