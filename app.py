@@ -25,7 +25,7 @@ def generate_company_name():
         words = f.read().splitlines()
         company_name += random.choice(words).capitalize() + " "
 
-    with open('words/verbs.txt', 'r') as f:
+    with open('words/nouns.txt', 'r') as f:
         words = f.read().splitlines()
         company_name += random.choice(words).capitalize()
     return company_name
