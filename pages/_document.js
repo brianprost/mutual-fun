@@ -6,7 +6,7 @@ const MyDocument = () => {
       <Head />
       <link
         rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Belleza&display=optional"
+        href="https://fonts.googleapis.com/css2?family=Belleza&display=swap"
       />
       <link rel="manifest" href="/manifest.json" />
       <meta
