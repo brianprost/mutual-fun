@@ -6,7 +6,7 @@ export default () => {
       <Head />
       <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Belleza&family=Inter:wght@394&display=optional"
+          href="https://fonts.googleapis.com/css2?family=Belleza&display=optional"
         />
         <meta
           name="theme-color"

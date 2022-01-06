@@ -7,12 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: theme => ({
-        "mutual-fun": "url('./public/img/mutual-fun-background.webp'",
-      }),
+      colors: {
+        "mf-gold": "#ddc385",
+        "mf-blue": "#003049",
+      },
       fontFamily: {
         belleza: ["'Belleza'", ...defaultTheme.fontFamily.sans],
-        inter: ["'Inter'", ...defaultTheme.fontFamily.sans],
       }
     },
   },
