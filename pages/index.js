@@ -20,14 +20,14 @@ export default function Home() {
   return (
     <div className="flex flex-col justify-between h-screen bg-mf-blue">
       <nav className="flex align-top justify-center h-28 bg-mf-gold overflow-hidden">
-        <img src="./img/mutual-fun-logo.svg" alt="mutual fun logo"/>
+        <img src="./img/mutual-fun-logo.svg" alt="mutual fun logo" />
       </nav>
       <main className="flex flex-col justify-center items-center">
         <h2 className="mb-10 text-2xl text-center text-mf-gold font-belleza ">
           Your business name is:
         </h2>
-        <div className="container flex flex-col justify-center h-72 mx-4 bg-neutral-200 rounded-lg border border-gray-200 drop-shadow-lg  bg-opacity-10">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center font-bold capitalize text-mf-gold font-belleza drop-shadow-md">
+        <div className="container flex flex-col justify-center h-72 max-w-xs md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl bg-neutral-200 rounded-lg border border-gray-200 drop-shadow-lg bg-opacity-10">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center font-bold capitalize text-mf-gold font-belleza drop-shadow-md px-3">
             {companyName}
           </h1>
         </div>
@@ -38,10 +38,12 @@ export default function Home() {
         >
           AnotherOne
         </button>
-        
       </main>
       <footer className="flex">
-      <div className="text-mf-gold text-xl font-bold font-belleza tracking-wider mb-3 ml-3">Made with ❤️ and ☕️ by Brian</div>
+        <div className="text-mf-gold text-xl font-bold font-belleza tracking-wider mb-3 ml-3">
+          Made with ❤️ and ☕️ by{" "}
+          <a href="https://brianprost.com/" target="_blank" rel="noopener noreferrer"  className="underline underline-offset-4 hover:underline-offset-2">Brian Prost</a>.
+        </div>
       </footer>
     </div>
   );
