@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div className="flex flex-col justify-between h-screen bg-mf-blue">
       <nav className="flex align-top justify-center h-28 bg-mf-gold overflow-hidden">
-        <img src="./img/mutual-fun-logo.svg" />
+        <img src="./img/mutual-fun-logo.svg" alt="mutual fun logo"/>
       </nav>
       <main className="flex flex-col justify-center items-center">
         <h2 className="mb-10 text-2xl text-center text-mf-gold font-belleza ">
