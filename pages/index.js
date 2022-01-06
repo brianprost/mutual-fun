@@ -1,82 +1,60 @@
-import Head from 'next/head'
+import React, { useState } from "react";
+import Head from "next/head";
+import { Nouns, Adjectives } from "../data/words";
 
 export default function Home() {
+  function generateCompanyName() {
+    let ranCompName = Adjectives[Math.floor(Math.random() * Adjectives.length)];
+    ranCompName += " ";
+    ranCompName += Nouns[Math.floor(Math.random() * Nouns.length)];
+    ranCompName += " ";
+    ranCompName += Nouns[Math.floor(Math.random() * Nouns.length)];
+
+    return ranCompName;
+  }
+
+  const [companyName, setCompanyName] = useState(generateCompanyName());
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Belleza&family=Inter:wght@659&display=optional"
+        />
+        <meta
+          name="theme-color"
+          content="#ddc385"
+          media="(prefers-color-scheme: light)"
+        />
+        <meta
+          name="theme-color"
+          content="#003049"
+          media="(prefers-color-scheme: dark)"
+        />
+        <meta property="og:title" content="Mutual FUN" />
+        <meta property="og:image" content="img/mutual-fun-logo.jpg" />
       </Head>
-
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
-
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <div className="flex flex-col justify-center items-center h-screen bg-sky-900">
+        <img
+          src="./img/mutual-fun-logo.jpg"
+          className="sm:max-h-60 w-auto pb-20 rounded-lg"
+          alt="mutual fun logo"
+        />
+        <div className="flex items-center px-6 py-32 h-1/3 w-auto max-w-lg bg-neutral-200 rounded-lg border border-gray-200 drop-shadow-lg mx-4 md:mx-0 bg-opacity-20">
+          <h1 className="text-7xl text-center font-bold capitalize text-yellow-600 font-belleza drop-shadow-md">
+            {companyName}
+          </h1>
         </div>
-      </main>
 
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          type="reset"
+          className="text-white bg-transparent border-2 border-white hover:bg-yellow-700 focus:ring-4 focus:ring-yellow-300  rounded-lg text-xl mt-20 px-5 py-2.5 text-center mr-2 mb-2 font-inter font-light tracking-narrow"
+          onClick={() => setCompanyName(generateCompanyName())}
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
+          AnotherOne
+        </button>
+      </div>
     </div>
-  )
+  );
 }
