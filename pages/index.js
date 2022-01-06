@@ -1,7 +1,5 @@
-import React, { useState } from "react";
-import MutualFunLogo from "../public/img/mutual-fun-logo.svg";
+import { useState } from "react";
 import Image from "next/image";
-import Head from "next/head";
 import { Nouns, Adjectives } from "../data/words";
 
 export default function Home() {
