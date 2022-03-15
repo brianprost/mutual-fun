@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useState } from "react";
 import { Nouns, Adjectives } from "../data/words";
 
@@ -17,7 +18,7 @@ export default function Home() {
   return (
     <div className="flex flex-col justify-between h-screen bg-mf-blue">
       <nav className="flex align-top justify-center h-28 bg-mf-gold overflow-hidden">
-        <img src="/img/mutual-fun-logo.svg" alt="mutual fun logo"/>
+        <img src="/img/mutual-fun-logo.svg" alt="mutual fun logo" />
       </nav>
       <main className="flex flex-col justify-center items-center">
         <h2 className="mb-10 text-2xl text-center text-mf-gold font-belleza tracking-wide">
@@ -39,7 +40,15 @@ export default function Home() {
       <footer className="flex">
         <div className="text-mf-gold text-md:text-lg font-bold font-belleza tracking-wider mb-3 ml-3">
           Made with ❤️ and ☕️ by{" "}
-          <a href="https://brianprost.com/" target="_blank" rel="noopener noreferrer"  className="underline underline-offset-4 hover:underline-offset-2">Brian Prost</a>.
+          <a
+            href="https://brianprost.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-4 hover:underline-offset-2"
+          >
+            Brian Prost
+          </a>
+          .
         </div>
       </footer>
     </div>

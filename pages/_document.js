@@ -4,10 +4,6 @@ const MyDocument = () => {
   return (
     <Html lang="en">
       <Head />
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Belleza&display=swap"
-      />
       <link rel="manifest" href="/manifest.json" />
       <meta
         rel="description"
@@ -29,7 +25,7 @@ const MyDocument = () => {
       </body>
     </Html>
   );
-}
+};
 
 MyDocument.displayName = "MyDocument";
 
